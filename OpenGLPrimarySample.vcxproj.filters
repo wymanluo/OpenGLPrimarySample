@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\glad\glad.c">
+      <Filter>glad</Filter>
+    </ClCompile>
+    <ClCompile Include="src\samples\HelloTriangle.cpp">
+      <Filter>samples</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GlUtil.cpp" />
+    <ClCompile Include="src\samples\SampleManager.cpp">
+      <Filter>samples</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="glad">
+      <UniqueIdentifier>{36150f53-bd43-44c7-afdf-8777522e2758}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="samples">
+      <UniqueIdentifier>{382047e7-ef57-480f-8e90-fe9acbf69a95}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\samples\HelloTriangle.h">
+      <Filter>samples</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GlUtil.h" />
+    <ClInclude Include="src\samples\SampleManager.h">
+      <Filter>samples</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
