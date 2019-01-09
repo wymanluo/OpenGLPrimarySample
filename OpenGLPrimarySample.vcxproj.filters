@@ -12,6 +12,7 @@
     <ClCompile Include="src\samples\SampleManager.cpp">
       <Filter>samples</Filter>
     </ClCompile>
+    <ClCompile Include="src\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="glad">
@@ -19,6 +20,9 @@
     </Filter>
     <Filter Include="samples">
       <UniqueIdentifier>{382047e7-ef57-480f-8e90-fe9acbf69a95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shader">
+      <UniqueIdentifier>{08761c06-43b6-49ff-a2bf-d21f5a740c3a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -29,5 +33,14 @@
     <ClInclude Include="src\samples\SampleManager.h">
       <Filter>samples</Filter>
     </ClInclude>
+    <ClInclude Include="src\Shader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\shader\HelloTriangle.frag">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="src\shader\HelloTriangle.vert">
+      <Filter>shader</Filter>
+    </None>
   </ItemGroup>
 </Project>
