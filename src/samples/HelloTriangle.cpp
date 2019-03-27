@@ -18,12 +18,10 @@ void HelloTriangle::Init()
 {
 	// vertex shader
 	m_vertexShader = glCreateShader(GL_VERTEX_SHADER);
-	//GlUtil::GlCompileShader(m_vertexShader, g_vertexShaderSource);
 	GlUtil::GlCompileShader(m_vertexShader, shader_hello_triangle_vert);
 
 	// fragment shader
 	m_fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-	//GlUtil::GlCompileShader(m_fragmentShader, g_fragmentShaderSource);
 	GlUtil::GlCompileShader(m_fragmentShader, shader_hello_triangle_frag);
 
 	// link shaders
@@ -34,7 +32,7 @@ void HelloTriangle::Init()
 	//glDeleteShader(m_fragmentShader);
 
 	// vertex position data
-	float vertices[] = {
+	GLfloat vertices[] = {
 		-0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f,  // left  
 		 0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,  // right 
 		 0.0f,  0.5f, 0.0f, 0.0f, 0.0f, 1.0f,  // top   
@@ -63,10 +61,10 @@ void HelloTriangle::Init()
 
 void HelloTriangle::Draw()
 {
-	float time = glfwGetTime();
-	float red = std::sin(time);
+	float time  = glfwGetTime();
+	float red   = std::sin(time);
 	float green = std::cos(time);
-	float blue = std::tan(time);
+	float blue  = std::tan(time);
 	int uniformColorIndex = glGetUniformLocation(m_shaderProgram, "uniformColor");
 	glUniform4f(uniformColorIndex, red, green, blue, 1.0f);
 
