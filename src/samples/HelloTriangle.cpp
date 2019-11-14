@@ -65,6 +65,9 @@ void HelloTriangle::Draw()
 	float red   = std::sin(time);
 	float green = std::cos(time);
 	float blue  = std::tan(time);
+    /*float red = 1.0f;
+    float green = 0.5f;
+    float blue = 0.0f;*/
 	int uniformColorIndex = glGetUniformLocation(m_shaderProgram, "uniformColor");
 	glUniform4f(uniformColorIndex, red, green, blue, 1.0f);
 

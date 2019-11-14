@@ -8,7 +8,7 @@ int processInput(GLFWwindow *window);
 
 // settings
 const unsigned int SCR_WIDTH = 1280;
-const unsigned int SCR_HEIGHT = 800;
+const unsigned int SCR_HEIGHT = 880;
 
 static GLFWwindow* CreateGLWindow()
 {
@@ -67,7 +67,8 @@ int main()
 		if (frameInterval >= interval.QuadPart)
 		{
 			nLast.QuadPart = nNow.QuadPart;
-			// render
+			
+            // clear
 			glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);
 
@@ -82,14 +83,11 @@ int main()
 		}
 		else
 		{
-			// The precision of timer on Windows is set to highest (1ms) by 'timeBeginPeriod' from above code,
-			// but it's still not precise enough. For example, if the precision of timer is 1ms,
-			// Sleep(3) may make a sleep of 2ms or 4ms. Therefore, we subtract 1ms here to make Sleep time shorter.
-			// If 'waitMS' is equal or less than 1ms, don't sleep and run into next loop to
-			// boost CPU to next frame accurately.
 			waitMS = (interval.QuadPart - frameInterval) * 1000LL / freq.QuadPart - 1L;
-			if (waitMS > 1L)
-				Sleep(waitMS);
+            if (waitMS > 1L)
+            {
+                Sleep(waitMS);
+            }
 		}
 	}
 
