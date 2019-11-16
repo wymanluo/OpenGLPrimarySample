@@ -39,6 +39,6 @@ void GeometryShader::Draw()
     __super::Draw();
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    glDrawArrays(GL_POINTS, 0, 3);
-    //glDrawArrays(GL_TRIANGLES, 0, 3);
+    //glDrawArrays(GL_POINTS, 0, 3);
+    glDrawArrays(GL_TRIANGLES, 0, 3);
 }

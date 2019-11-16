@@ -33,9 +33,6 @@ void HelloTriangle::Init()
 
 	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
 	glEnableVertexAttribArray(1);
-
-	// uncomment this call to draw in wireframe polygons.
-	// glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 }
 
 void HelloTriangle::Draw()
@@ -49,6 +46,6 @@ void HelloTriangle::Draw()
     int uniformColorIndex = glGetUniformLocation(shaderProgram_, "uniformColor");
     glUniform4f(uniformColorIndex, red, green, blue, 1.0f);*/
 
-    //glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	glDrawArrays(GL_TRIANGLES, 0, 3);
 }
