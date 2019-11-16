@@ -69,12 +69,11 @@ int main()
 			nLast.QuadPart = nNow.QuadPart;
 			
             // clear
-			glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+			glClearColor(0.2f, 0.4f, 0.4f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);
 
 			// input
 			int pressKey = processInput(window);
-
 			manager.DrawSample(pressKey);
 
 			// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
@@ -83,7 +82,7 @@ int main()
 		}
 		else
 		{
-			waitMS = (interval.QuadPart - frameInterval) * 1000LL / freq.QuadPart - 1L;
+			waitMS = static_cast<LONG>((interval.QuadPart - frameInterval) * 1000LL / freq.QuadPart - 1L);
             if (waitMS > 1L)
             {
                 Sleep(waitMS);
@@ -114,6 +113,11 @@ int processInput(GLFWwindow *window)
 		std::cout << "key 1 has been pressed!" << std::endl;
 		return GLFW_KEY_1;
 	}
+    else if (glfwGetKey(window, GLFW_KEY_2) == GLFW_PRESS)
+    {
+        std::cout << "key  has been pressed!" << std::endl;
+        return GLFW_KEY_2;
+    }
 
 	return -1;
 }

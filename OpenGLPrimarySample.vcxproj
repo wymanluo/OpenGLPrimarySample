@@ -149,19 +149,24 @@
     <ClCompile Include="src\glad\glad.c" />
     <ClCompile Include="src\GlUtil.cpp" />
     <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="src\math\Vec2.cpp" />
+    <ClCompile Include="src\samples\GeometryShader.cpp" />
     <ClCompile Include="src\samples\HelloTriangle.cpp" />
+    <ClCompile Include="src\samples\SampleBase.cpp" />
     <ClCompile Include="src\samples\SampleManager.cpp" />
-    <ClCompile Include="src\Shader.cpp" />
+    <ClCompile Include="src\shader\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\GlUtil.h" />
-    <ClInclude Include="src\math\Vec2.h" />
+    <ClInclude Include="src\samples\GeometryShader.h" />
     <ClInclude Include="src\samples\HelloTriangle.h" />
+    <ClInclude Include="src\samples\SampleBase.h" />
     <ClInclude Include="src\samples\SampleManager.h" />
-    <ClInclude Include="src\Shader.h" />
+    <ClInclude Include="src\shader\Shader.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="src\shader\GeometryShader.frag" />
+    <None Include="src\shader\GeometryShader.geom" />
+    <None Include="src\shader\GeometryShader.vert" />
     <None Include="src\shader\HelloTriangle.frag" />
     <None Include="src\shader\HelloTriangle.vert" />
   </ItemGroup>

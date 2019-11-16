@@ -1,20 +1,13 @@
 #pragma once
-class HelloTriangle
+#include "SampleBase.h"
+
+class HelloTriangle : public SampleBase
 {
 public:
 	HelloTriangle();
-	~HelloTriangle();
+	virtual ~HelloTriangle();
 
 public:
-	void Draw();
-
-private:
-	void Init();
-
-private:
-	int m_vertexShader;
-	int m_fragmentShader;
-	int m_shaderProgram;
-	unsigned int m_VBO;
-	unsigned int m_VAO;
+    void Init() override;
+	void Draw() override;	
 };
