@@ -10,4 +10,5 @@ public:
 public:
     void Init() override;
 	void Draw() override;	
+    void OnKeyPress(int key, float delta) override;
 };

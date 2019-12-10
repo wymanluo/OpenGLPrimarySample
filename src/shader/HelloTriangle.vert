@@ -1,4 +1,4 @@
-const char* shader_hello_triangle_vert = R"(
+const char* hello_triangle_vs = R"(
 
 layout (location = 0) in vec3 pos;
 layout (location = 1) in vec3 incolor;

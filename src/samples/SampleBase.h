@@ -2,27 +2,27 @@
 
 #include "glad/glad.h"
 
+class Shader;
+
 class SampleBase
 {
 public:
-    SampleBase(const GLchar* vertexShader, const GLchar* fragmentShader, const GLchar* geometryShader);
+    SampleBase();
     virtual ~SampleBase();
 
 public:
     virtual void Init() = 0;
     virtual void Draw();
+    virtual void OnKeyPress(int key, float delta) = 0;
+    virtual void OnMouseMove(double x, double y) {}
+    virtual void OnMouseScroll(double x, double y) {}
 
-private:
-  void InitShader(const GLchar* vertexShader, const GLchar* fragmentShader, const GLchar* geometryShader);
-
+protected:
+    void InitShader(const GLchar* vertexShader, const GLchar* fragmentShader, const GLchar* geometryShader);
+    Shader* GetShader() const {return shader_;}
 
 protected:
     unsigned int VBO_;
     unsigned int VAO_;
-    int shaderProgram_;
-
-private:
-    int shaderVertex_;
-    int shaderFragment_;
-    int shaderGeometry_;
+    Shader* shader_;
 };

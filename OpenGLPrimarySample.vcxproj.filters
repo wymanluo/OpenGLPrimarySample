@@ -8,18 +8,23 @@
     <ClCompile Include="src\samples\HelloTriangle.cpp">
       <Filter>samples</Filter>
     </ClCompile>
-    <ClCompile Include="src\GlUtil.cpp" />
     <ClCompile Include="src\samples\SampleManager.cpp">
       <Filter>samples</Filter>
     </ClCompile>
     <ClCompile Include="src\samples\SampleBase.cpp">
       <Filter>samples</Filter>
     </ClCompile>
-    <ClCompile Include="src\samples\GeometryShader.cpp">
-      <Filter>samples</Filter>
-    </ClCompile>
     <ClCompile Include="src\shader\Shader.cpp">
       <Filter>shader</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stb_image.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GlUtil.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\samples\SampleGeometryShader.cpp">
+      <Filter>samples</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -32,23 +37,43 @@
     <Filter Include="shader">
       <UniqueIdentifier>{08761c06-43b6-49ff-a2bf-d21f5a740c3a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{abfb18dd-a444-4b7d-a95b-cf382c13013a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\samples\HelloTriangle.h">
       <Filter>samples</Filter>
     </ClInclude>
-    <ClInclude Include="src\GlUtil.h" />
     <ClInclude Include="src\samples\SampleManager.h">
       <Filter>samples</Filter>
     </ClInclude>
     <ClInclude Include="src\samples\SampleBase.h">
       <Filter>samples</Filter>
     </ClInclude>
-    <ClInclude Include="src\samples\GeometryShader.h">
-      <Filter>samples</Filter>
-    </ClInclude>
     <ClInclude Include="src\shader\Shader.h">
       <Filter>shader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\Mesh.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\Model.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\Camera.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stb_image.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GlUtil.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\Def.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\samples\SampleGeometryShader.h">
+      <Filter>samples</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -65,6 +90,30 @@
       <Filter>shader</Filter>
     </None>
     <None Include="src\shader\GeometryShader.geom">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="src\shader\GeometryShaderExplode.frag">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="src\shader\GeometryShaderExplode.geom">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="src\shader\GeometryShaderExplode.vert">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="src\shader\GeometryShaderNormal.frag">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="src\shader\GeometryShaderNormal.geom">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="src\shader\GeometryShaderNormal.vert">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="src\shader\GeometryShaderModel.frag">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="src\shader\GeometryShaderModel.vert">
       <Filter>shader</Filter>
     </None>
   </ItemGroup>

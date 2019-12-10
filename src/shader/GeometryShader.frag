@@ -1,10 +1,11 @@
-const char* shader_geometry_shader_frag = R"(
+const char* geometry_shader_fs = R"(
 
-in vec4 color;
+#version 450 core
+in vec3 fColor;
 void main()
 {
-	gl_FragColor = color;
-	//gl_FragColor = vec4(0.0, 0.0, 1.0, 1.0); 
+	gl_FragColor = vec4(fColor, 1.0); 
+	//gl_FragColor = vec4(0.0, 1.0, 0.0, 1.0); 
 }
 
 )";

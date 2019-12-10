@@ -1,4 +1,4 @@
-const char* shader_hello_triangle_frag = R"(
+const char* hello_triangle_fs = R"(
 
 in vec4 color;
 out vec4 FragColor;
